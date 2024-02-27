@@ -1,0 +1,66 @@
+.container-about {
+    margin: auto;
+    padding: 10vw 8vw 10vw 16vw;
+}
+.about-p {
+    padding-bottom: 5rem;
+}
+.about-p p {
+    font-size: 3rem;
+    line-height: 0.9;
+    font-weight: bold;
+}
+
+/* section */
+.box-personal {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    margin: 3rem 0;
+}
+.box-personal:nth-child(3) .box-name {
+    order: 2;
+}
+.box-name {
+    border: 3px solid var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-skin);
+}
+.box-name h2 {
+    font-size: 8rem;
+    transform: rotate(-90deg);
+}
+.box-photo {
+    border: 3px solid var(--black);
+    background-color: var(--dark-skin);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+.box-photo span {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 2rem;
+    font-family: var(--second-font);
+}
+.box-photo .rfm-marquee-container {
+    z-index: 1;
+    position: absolute;
+    width: 105%;
+    transform: rotate(-5deg);
+    left: -15px;
+}
+.box-photo .image-person {
+    width: 500px;
+    z-index: 2;
+}
+.box-photo .image-person img {
+    width: 100%;
+    margin-bottom: -5px;
+}

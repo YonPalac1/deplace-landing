@@ -1,0 +1,24 @@
+{
+  "name": "deplace",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "@motionone/utils": "10.17.0",
+    "@vitejs/plugin-react": "4.2.1",
+    "framer-motion": "11.0.6",
+    "motion": "10.17.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-fast-marquee": "1.6.4",
+    "react-router-dom": "6.22.1"
+  }
+}
