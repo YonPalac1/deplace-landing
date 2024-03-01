@@ -1,3 +1,10 @@
+.collections {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 .container-slider {
     display: flex;
     justify-content: center;
@@ -62,4 +69,12 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.marquee-collections {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 50%;
+    z-index: 1;
 }

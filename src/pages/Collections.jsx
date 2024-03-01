@@ -4,6 +4,7 @@ import { Navbar } from "../components/Navbar"
 import { COL } from "../const"
 
 import "./collection.css"
+import Marquee from "react-fast-marquee"
 
 export const Collections = () => {
     const [width, setWidth] = useState(0);
@@ -23,21 +24,19 @@ export const Collections = () => {
 
     const handleBack = () => {
         if (itemCurrent < 0) {
-            console.log("n3ext")
             setIndex(prev => prev - 1)
             setItemCurrent(index * -cardWidth - 40 * index)
         }
     }
     function handleNext() {
         if (-itemCurrent < width) {
-            console.log("back")
             setIndex(prev => prev + 1)
             setItemCurrent(index * -cardWidth - 40 * index)
         }
     }
     
     
-    return <>
+    return <section className="collections">
         <Navbar />
         <motion.div className="container-slider">
             <motion.div className="border-box" style={{ width: cardWidth, height: cardHeight }}></motion.div>
@@ -57,6 +56,7 @@ export const Collections = () => {
                 }
             </motion.div>
         </motion.div>
+        <Marquee className="marquee-collections" speed={200}>colour shades mixed with urban trekking art and outdoor.</Marquee>
         <div className="controls">
             <div className="buttons">
                 <button className="buttons-next" onClick={handleBack}>
@@ -71,5 +71,5 @@ export const Collections = () => {
                 </button>
             </div>
         </div>
-    </>
+    </section>
 } 
