@@ -9,37 +9,38 @@ export const Collections = () => {
     const [width, setWidth] = useState(0);
     const [cardWidth, setCardWith] = useState();
     const [cardHeight, setCardHeight] = useState();
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = useState(1)
     const [itemCurrent, setItemCurrent] = useState(0)
     const carousel = useRef();
     const cardRef = useRef();
 
+    
     useEffect(() => {
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
         setCardWith(cardRef.current.clientWidth)
         setCardHeight(cardRef.current.clientHeight)
-        console.log("wi", width)
-        console.log("itemCurrent", itemCurrent)
     }, [index, cardWidth, cardHeight, itemCurrent, carousel])
-    
-    const handleBack = () => {
-        if (itemCurrent === 0) return setItemCurrent(0)
-        if (itemCurrent < width) {
-            setIndex(prev => prev + 1)
-            setItemCurrent(index * cardWidth)
-        }
-    }
-    const handleNext = () => {
-        if (itemCurrent > -width) {
-            setIndex(prev => prev - 1)
-            setItemCurrent(index * cardWidth)
-        }
-    }
 
+    const handleBack = () => {
+        if (itemCurrent < 0) {
+            console.log("n3ext")
+            setIndex(prev => prev - 1)
+            setItemCurrent(index * -cardWidth - 40 * index)
+        }
+    }
+    function handleNext() {
+        if (-itemCurrent < width) {
+            console.log("back")
+            setIndex(prev => prev + 1)
+            setItemCurrent(index * -cardWidth - 40 * index)
+        }
+    }
+    
+    
     return <>
         <Navbar />
         <motion.div className="container-slider">
-            <motion.div className="border-box" style={{ width: 300, height: cardHeight }}></motion.div>
+            <motion.div className="border-box" style={{ width: cardWidth, height: cardHeight }}></motion.div>
             <motion.div
                 className="slider-inner"
                 drag="x"
@@ -58,13 +59,13 @@ export const Collections = () => {
         </motion.div>
         <div className="controls">
             <div className="buttons">
-                <button className="buttons-next" onClick={() => handleBack()}>
+                <button className="buttons-next" onClick={handleBack}>
                     <img src="https://web.archive.org/web/20220122221705im_/https://global-uploads.webflow.com/5c9c9c646cf0969b319f264f/5d14818767ac37ac193eccf4_circle-container.svg"></img>
                     <img src="https://web.archive.org/web/20220122221716im_/https://global-uploads.webflow.com/5c9c9c646cf0969b319f264f/5d24aa633c6cae18850994a2_arrow.svg"></img>
                 </button>
             </div>
             <div className="buttons">
-                <button className="buttons-next" onClick={() => handleNext()}>
+                <button className="buttons-next" onClick={handleNext}>
                     <img src="https://web.archive.org/web/20220122221705im_/https://global-uploads.webflow.com/5c9c9c646cf0969b319f264f/5d14818767ac37ac193eccf4_circle-container.svg"></img>
                     <img src="https://web.archive.org/web/20220122221716im_/https://global-uploads.webflow.com/5c9c9c646cf0969b319f264f/5d24aa633c6cae18850994a2_arrow.svg"></img>
                 </button>

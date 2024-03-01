@@ -444,34 +444,6 @@ body {
   font-size: 24px;
 }
 
-/* Carousel vertical */
-.carousel-vertical {
-  padding-top: 0;
-  display: flex;
-  justify-content: center; 
-  height: 100vh;
-}
-.carousel .inner-carousel-vertical {
-  padding-left: 0;
-}
-.carousel .inner-carousel-vertical .item {
-  padding: 20px;
-  margin-bottom: 40px;
-  transform: translateY(var(--slide));
-  gap: 20px;
-}
-.carousel .inner-carousel-vertical .item img {
-  width: 500px;
-}
-
-.carousel-vertical .rfm-marquee-container {
-  background: none;
-  border: none;
-}
-.marquees-slides {
-  display: flex;
-}
-
 /* Coments  */
 .comments {
   display: flex;
