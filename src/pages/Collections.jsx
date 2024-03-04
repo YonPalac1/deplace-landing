@@ -39,7 +39,7 @@ export const Collections = () => {
     return <section className="collections">
         <Navbar />
         <motion.div className="container-slider">
-            <motion.div className="border-box" style={{ width: cardWidth, height: cardHeight }}></motion.div>
+            {/* <motion.div className="border-box" style={{ width: cardWidth, height: cardHeight }}></motion.div> */}
             <motion.div
                 className="slider-inner"
                 drag="x"

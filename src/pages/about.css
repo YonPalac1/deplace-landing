@@ -64,3 +64,53 @@
     width: 100%;
     margin-bottom: -5px;
 }
+
+@media only screen and (max-width: 1208px) {
+    .box-photo span {
+        width: 100px;
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 922px) {
+    .box-name h2 {
+        font-size: 5rem;
+        transform: rotate(-90deg);
+    }
+    .box-photo .image-person img {
+        width: 80%;
+    }
+    .box-photo .rfm-marquee-container {
+        z-index: 1;
+        position: absolute;
+        width: 105%;
+        transform: rotate(-5deg);
+        left: -15px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .box-personal {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .box-name h2 {
+        font-size: 5rem;
+        transform: rotate(0deg);
+    }
+    .box-personal .box-name {
+        order: 2;
+        width: 100%;
+        border-top: none;
+    }
+}
+@media only screen and (max-width: 642px) {
+    .box-photo .image-person {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box-photo .image-person img {
+        width: 60%;
+    }
+}
