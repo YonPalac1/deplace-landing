@@ -5,7 +5,7 @@ export const Navbar = () => {
     const [active, setActive] = useState(false);
 
     return <div className="navbar">
-        <h4>deplace maison</h4>
+        <Link to="/"><h4>deplace maison</h4></Link>
         <button onClick={() => setActive(!active)}>cart</button>
 
         <div className="navbar-links">

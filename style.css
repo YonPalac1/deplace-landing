@@ -60,6 +60,9 @@ body {
   z-index: 100;
 }
 
+.navbar a {
+  color: var(--black);
+}
 .navbar h4 {
   position: fixed;
   top: 100px;

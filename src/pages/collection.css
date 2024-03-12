@@ -80,6 +80,7 @@
     border: none;
     top: 50%;
     z-index: 1;
+    position: absolute;
 }
 @media only screen and (max-width: 612px) {
     .controls .buttons button {
