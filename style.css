@@ -57,7 +57,7 @@ body {
 /* Navbar */
 /* Navbar */
 .navbar {
-  z-index: 100;
+  z-index: 2000;
 }
 
 .navbar a {
@@ -107,6 +107,7 @@ body {
 }
 .navbar .navbar-links a {
   text-decoration: none;
+  font-weight: bold;
   color: var(--black);
 }
 .backdrop {
