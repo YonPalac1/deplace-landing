@@ -78,8 +78,11 @@
     position: absolute;
     background: none;
     border: none;
-    top: 50%;
+    top: 45%;
     z-index: 1;
+}
+.rfm-child {
+    font-size: 30px;
 }
 @media only screen and (max-width: 612px) {
     .controls .buttons button {
