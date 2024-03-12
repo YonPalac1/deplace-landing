@@ -56,7 +56,9 @@ export const Collections = () => {
                 }
             </motion.div>
         </motion.div>
-        <Marquee className="marquee-collections" speed={200}>colour shades mixed with urban trekking art and outdoor.</Marquee>
+        <div style={{ position: "absolute", width: "100%" }}>
+            <Marquee className="marquee-collections" speed={200}>colour shades mixed with urban trekking art and outdoor.</Marquee>
+        </div>
         <div className="controls">
             <div className="buttons">
                 <button className="buttons-next" onClick={handleBack}>
